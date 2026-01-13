@@ -1,9 +1,6 @@
 const ramos = document.querySelectorAll('.ramo');
-
-// Cargar progreso guardado
 let aprobados = JSON.parse(localStorage.getItem('aprobados')) || [];
 
-// Inicializar estados
 ramos.forEach(ramo => {
   const id = ramo.dataset.id;
   const prereq = ramo.dataset.prereq;
@@ -17,13 +14,11 @@ ramos.forEach(ramo => {
   }
 });
 
-// Click en ramo
 ramos.forEach(ramo => {
   ramo.addEventListener('click', () => {
-    const id = ramo.dataset.id;
-    const prereq = ramo.dataset.prereq;
-
     if (ramo.classList.contains('bloqueado')) return;
+
+    const id = ramo.dataset.id;
 
     if (ramo.classList.contains('aprobado')) {
       ramo.classList.remove('aprobado');
@@ -34,6 +29,6 @@ ramos.forEach(ramo => {
     }
 
     localStorage.setItem('aprobados', JSON.stringify(aprobados));
-    location.reload(); // refresca estados de prerrequisitos
+    location.reload();
   });
 });
