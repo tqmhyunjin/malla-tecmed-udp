@@ -2,33 +2,49 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Interactiva</title>
+  <title>Malla TM UDP – Bioanálisis Clínico</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Malla Interactiva</h1>
+<h1>Tecnología Médica UDP  
+<br><span>Bioanálisis Clínico y Medicina Transfusional</span></h1>
 
 <div class="malla">
 
-  <div class="semestre">
-    <h2>1° Semestre</h2>
-    <div class="ramo" data-id="anatomia">Anatomía</div>
-    <div class="ramo" data-id="biologia">Biología</div>
-  </div>
-
-  <div class="semestre">
-    <h2>2° Semestre</h2>
-    <div class="ramo" data-id="fisiologia" data-prereq="anatomia">
-      Fisiología
-    </div>
-    <div class="ramo" data-id="micro" data-prereq="biologia">
-      Microbiología
-    </div>
-  </div>
-
+<!-- SEMESTRE 1 -->
+<div class="semestre">
+<h2>1°</h2>
+<div class="ramo" data-id="morfo1">Morfofunción I</div>
+<div class="ramo" data-id="matebio">Matemáticas y Biofísica</div>
+<div class="ramo" data-id="biocel">Biología Celular y Genética</div>
 </div>
 
-<script src="script.js"></script>
-</body>
-</html>
+<!-- SEMESTRE 2 -->
+<div class="semestre">
+<h2>2°</h2>
+<div class="ramo" data-id="quimica">Química General y Orgánica</div>
+<div class="ramo" data-id="bioseg">Bioseguridad y Enfermería</div>
+<div class="ramo" data-id="bioq" data-prereq="quimica">Bioquímica</div>
+</div>
+
+<!-- SEMESTRE 3 -->
+<div class="semestre">
+<h2>3°</h2>
+<div class="ramo" data-id="morfo2" data-prereq="morfo1">Morfofunción II</div>
+<div class="ramo" data-id="fisiofarma" data-prereq="bioq">Fisiopatología y Farmacología</div>
+<div class="ramo" data-id="inmunob">Inmunología Básica</div>
+</div>
+
+<!-- SEMESTRE 4 -->
+<div class="semestre">
+<h2>4°</h2>
+<div class="ramo" data-id="saludpub">Salud Pública y Epidemiología</div>
+<div class="ramo" data-id="biomol">Biología Molecular</div>
+<div class="ramo" data-id="metodoslab" data-prereq="bioq">Métodos de Laboratorio Clínico</div>
+</div>
+
+<!-- SEMESTRE 5 -->
+<div class="semestre">
+<h2>5°</h2>
+<div class="ramo" data-id="bioqcli1" data-prereq="bioq">Bioqu
